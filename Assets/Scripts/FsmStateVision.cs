@@ -5,20 +5,28 @@ namespace FSM.Scripts
 {
     public class FsmStateVision : FsmState
     {
-        protected readonly SkinnedMeshRenderer MeshRenderer;
+        protected readonly GameObject TargetGroup;
         protected float Duration;
         private float _vDur;
+        // private SkinnedMeshRenderer _meshRenderer;
         
-        public FsmStateVision(Fsm fsm, SkinnedMeshRenderer _meshRenderer, float _duration) : base(fsm)
+        public FsmStateVision(Fsm fsm, GameObject _targetGroup, float _duration) : base(fsm)
         {
-            MeshRenderer = _meshRenderer;
+            TargetGroup = _targetGroup;
             Duration = _duration;
         }
         
         public override void Enter()
         {
+            foreach (var renderer in TargetGroup.GetComponentsInChildren<SkinnedMeshRenderer>())
+            {
+                renderer.material.EnableKeyword("_EMISSION");
+            }
+            Debug.Log("NEABLED");
+            
+            // _meshRenderer = TargetGroup.GetComponentInChildren<SkinnedMeshRenderer>();
             Debug.Log("Entered FsmStateVision");
-            MeshRenderer.material.EnableKeyword("_EMISSION");
+            // _meshRenderer.material.EnableKeyword("_EMISSION");
             _vDur = Duration;
         }
 
@@ -35,7 +43,11 @@ namespace FSM.Scripts
         public override void Exit()
         {
             Debug.Log("Exiting FsmStateVision");
-            MeshRenderer.material.DisableKeyword("_EMISSION");
+            foreach (var renderer in TargetGroup.GetComponentsInChildren<SkinnedMeshRenderer>())
+            {
+                renderer.material.DisableKeyword("_EMISSION");
+            }
+            Debug.Log("DISABLED");
         }
     }
 }
