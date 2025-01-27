@@ -21,8 +21,10 @@ namespace FSM.Scripts
             foreach (var renderer in TargetGroup.GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 renderer.material.EnableKeyword("_EMISSION");
+                Debug.Log("ENABLED");
             }
-            Debug.Log("NEABLED");
+            RenderSettings.fog = true;
+            
             
             // _meshRenderer = TargetGroup.GetComponentInChildren<SkinnedMeshRenderer>();
             Debug.Log("Entered FsmStateVision");
@@ -47,7 +49,7 @@ namespace FSM.Scripts
             {
                 renderer.material.DisableKeyword("_EMISSION");
             }
-            Debug.Log("DISABLED");
+            RenderSettings.fog = false;
         }
     }
 }
