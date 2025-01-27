@@ -6,13 +6,19 @@ namespace FSM.Scripts
     public class FsmController : MonoBehaviour
     {
         private Fsm _fsm;
-        private float _walkSpeed = 10f;
-        private float _runSpeed = 20f;
+        
         public Animator _animator;
         public Rigidbody _enemyRigid;
         public Collider _collider;
-        public bool Ulting;
+        public SkinnedMeshRenderer _skin;
+        
+        
+        
+        private float _walkSpeed = 10f;
+        private float _runSpeed = 20f;
         public int AttackDuration = 3;
+        [SerializeField] private float visionDuration = 4.5f;
+        public bool Ulting;
 
         private void Start()
         {
@@ -25,8 +31,8 @@ namespace FSM.Scripts
             _fsm.AddState(new FsmStateIdle(_fsm));
             _fsm.AddState(new FsmStateWalk(_fsm, transform, _walkSpeed));
             _fsm.AddState(new FsmStateRun(_fsm, transform, _runSpeed));
-            _fsm.AddState(new FsmStateUltAttack(_fsm, AttackDuration));
             _fsm.AddState(new FsmStateTest(_fsm));
+            _fsm.AddState(new FsmStateVision(_fsm, _skin, visionDuration));
             
             _fsm.SetState<FsmStateIdle>();
         }
@@ -37,6 +43,7 @@ namespace FSM.Scripts
             // Debug.Log(anim);
 
             if (Input.GetKeyDown(KeyCode.T)){_fsm.SetState<FsmStateTest>();}
+            if(Input.GetKeyDown(KeyCode.Q)){_fsm.SetState<FsmStateVision>();}
             
         }
 

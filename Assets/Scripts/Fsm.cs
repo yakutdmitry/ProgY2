@@ -37,6 +37,6 @@ public class Fsm
 
     public void Update()
     {
-        StateCurrent?.Update();
+        StateCurrent?.Update();                                                                                                                                                                                                                                                                                                
     }
 }
