@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -30,20 +31,34 @@ namespace FSM.Scripts
             Debug.Log("Entered FsmStateVision");
             // _meshRenderer.material.EnableKeyword("_EMISSION");
             _vDur = Duration;
+            Disable();
+            Fsm.SetState<FsmStateIdle>();
         }
 
         public override void Update()
         {
             
-             _vDur -= Time.deltaTime;
-             if (_vDur <= 0)
-             {
-                 Fsm.SetState<FsmStateIdle>();
-             } // TIMER
+             // _vDur -= Time.deltaTime;
+             // if (_vDur <= 0)
+             // {
+             //     Fsm.SetState<FsmStateIdle>();
+             // } // TIMER
+             //
              
         }
         public override void Exit()
         {
+            // Debug.Log("Exiting FsmStateVision");
+            // foreach (var renderer in TargetGroup.GetComponentsInChildren<SkinnedMeshRenderer>())
+            // {
+            //     renderer.material.DisableKeyword("_EMISSION");
+            // }
+            // RenderSettings.fog = false;
+        }
+
+        private async void Disable()
+        {
+            await Task.Delay(3000);
             Debug.Log("Exiting FsmStateVision");
             foreach (var renderer in TargetGroup.GetComponentsInChildren<SkinnedMeshRenderer>())
             {
