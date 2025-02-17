@@ -12,7 +12,7 @@ namespace FSM.Scripts
         public override void Enter()
         {
             _fsmController = GameObject.FindGameObjectWithTag("Player").GetComponent<FsmController>();
-            _fsmController._animator.Play("Walking");
+            // _fsmController._animator.Play("Walking");
         }
         public override void Update()
         {

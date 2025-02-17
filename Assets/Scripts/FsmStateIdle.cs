@@ -11,7 +11,7 @@ namespace FSM.Scripts
         {
             _fsmController = GameObject.FindGameObjectWithTag("Player").GetComponent<FsmController>();
             Debug.Log("Idle state [ENTER]");
-            _fsmController._animator.Play("Idle");
+            
         }
         
         public override void Exit()
@@ -29,7 +29,7 @@ namespace FSM.Scripts
                 Fsm.SetState<FsmStateWalk>();
             }
             
-            
+            _fsmController._animator.SetFloat("Velocity", 0);
         }
     }
 }

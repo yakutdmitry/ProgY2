@@ -20,6 +20,7 @@ namespace FSM.Scripts
         public override void Enter()
         {
             Debug.Log($"Movement ({this.GetType().Name}) state [ENTER]");
+            _fsmController = GameObject.FindGameObjectWithTag("Player").GetComponent<FsmController>();
         }
         
         public override void Exit()
@@ -38,10 +39,10 @@ namespace FSM.Scripts
                 Debug.Log("no input");
                 Fsm.SetState<FsmStateIdle>();
                 
-                
             }
 
             Move(inputDirection);
+            
         }
 
         protected Vector2 ReadInput()
@@ -56,6 +57,10 @@ namespace FSM.Scripts
         protected virtual void Move(Vector2 inputDirection)
         {
             Transform.position += new Vector3(inputDirection.x, 0f, inputDirection.y) * (Speed * Time.deltaTime);
+            // Debug.Log(Speed * Time.deltaTime);
+            _fsmController = GameObject.FindGameObjectWithTag("Player").GetComponent<FsmController>();
+            _fsmController._animator.SetFloat("Velocity", Speed * Time.deltaTime);
+            
         }
         
     }
