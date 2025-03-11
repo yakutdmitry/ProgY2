@@ -29,7 +29,6 @@ public class EneyAI : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        fsmController = GetComponent<FsmController>();
         animator = GetComponent<Animator>();
     }
 
@@ -38,10 +37,34 @@ public class EneyAI : MonoBehaviour
         playerInSight = Physics.CheckSphere(transform.position, sightDistance, whatIsPlayer);
         playerInAttack = Physics.CheckSphere(transform.position, attackDistance, whatIsPlayer);
 
-        if (!playerInSight && !playerInAttack) Patrolling();
-        if (playerInSight && !playerInAttack) Chase();
-        if (playerInAttack) Attack();
-        if (fsmController.Ulting) RunAway();
+        if (!fsmController.Ulting)
+        {
+            if (!playerInSight && !playerInAttack)
+            {
+                animator.SetTrigger("Walking");
+                Patrolling();
+            }
+
+            if (playerInSight && !playerInAttack)
+            {
+                animator.SetTrigger("Running");
+                Chase();
+            }
+
+            if (playerInAttack)
+            {
+                Attack();
+            }
+            animator.SetBool("Ulting", false);
+        }
+        
+        if (fsmController.Ulting)
+        {
+            animator.SetBool("Ulting", true);
+            RunAway();
+            Debug.Log("ULTIIIIIIIIIIIINGGGGGGGGGG");
+            
+        }
     }
 
     private void Patrolling()
@@ -56,7 +79,7 @@ public class EneyAI : MonoBehaviour
         {
             agent.SetDestination(walkPoint);
             agent.speed = baseSpeed;
-            animator.SetTrigger("Walking");
+            // animator.SetTrigger("Walking");
             Debug.Log("point");
         }
         
@@ -71,7 +94,7 @@ public class EneyAI : MonoBehaviour
     {
         agent.SetDestination(target.position);
         agent.speed += 2;
-        animator.SetTrigger("Running");
+        // animator.SetTrigger("Running");
     }
 
     private void Attack()
@@ -91,7 +114,8 @@ public class EneyAI : MonoBehaviour
 
     private void RunAway()
     {
-        animator.SetTrigger("RunAway");
+        // animator.SetTrigger("RunAway");
+        agent.speed = 0;
     }
 
     private void resetAttack()
