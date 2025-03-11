@@ -7,12 +7,12 @@ namespace FSM.Scripts
     {
         private Fsm _fsm;
         private float _walkSpeed = 10f;
-        private float _runSpeed = 20f;
+        private float _runSpeed = 25f;
         public int AttackDuration = 3;
         [SerializeField] private float visionDuration = 4.5f;
         public bool Ulting;
-        
-        
+
+        public AudioSource _soudns;
         public Animator _animator;
         public GameObject Targets;
 
@@ -21,6 +21,7 @@ namespace FSM.Scripts
             _fsm = new Fsm();
 
             _animator = GetComponent<Animator>();
+            _soudns = GetComponent<AudioSource>();
             // _collider = GetComponent<Collider>();
             // _enemyRigid = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Rigidbody>();
             
