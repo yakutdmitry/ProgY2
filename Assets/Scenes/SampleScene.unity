@@ -3861,7 +3861,7 @@ GameObject:
   - component: {fileID: 288317063}
   - component: {fileID: 288317062}
   - component: {fileID: 288317064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4515,8 +4515,8 @@ Transform:
   m_GameObject: {fileID: 322907804}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.75080305, z: -0, w: -0.66052616}
-  m_LocalPosition: {x: -2.7999997, y: -0.24392985, z: -8.709999}
-  m_LocalScale: {x: 0.01417628, y: 0.014176274, z: 0.01417628}
+  m_LocalPosition: {x: -2.7999995, y: -0.24392983, z: -8.709999}
+  m_LocalScale: {x: 0.014176283, y: 0.014176274, z: 0.014176285}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 937708222}
@@ -4532,8 +4532,6 @@ Transform:
   - {fileID: 486994353}
   - {fileID: 543450651782861319}
   - {fileID: 543450651872809013}
-  - {fileID: 543450653223903717}
-  - {fileID: 444262708}
   - {fileID: 1282050316}
   - {fileID: 152085846}
   - {fileID: 695076340}
@@ -6226,7 +6224,7 @@ GameObject:
   - component: {fileID: 426119085}
   - component: {fileID: 426119084}
   - component: {fileID: 426119086}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6595,7 +6593,7 @@ GameObject:
   - component: {fileID: 444262709}
   - component: {fileID: 444262710}
   - component: {fileID: 444262711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chevrolet_Caprice_Tiedtke (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6610,9 +6608,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444262707}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7056003, y: -0.046131164, z: -0.046131164, w: 0.70560056}
-  m_LocalPosition: {x: 152.9014, y: 9.165285, z: 7.523256}
-  m_LocalScale: {x: 7054.0347, y: 7054.036, z: 7054.039}
+  m_LocalRotation: {x: 0.50070286, y: -0.4992962, z: -0.499296, w: -0.50070304}
+  m_LocalPosition: {x: -2.9703884, y: -0.114000246, z: -10.873496}
+  m_LocalScale: {x: 100, y: 100.000046, z: 100.000015}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1249216386}
@@ -6638,7 +6636,7 @@ Transform:
   - {fileID: 1911395894}
   - {fileID: 861249848}
   - {fileID: 1305642564}
-  m_Father: {fileID: 322907805}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -367.481}
 --- !u!136 &444262709
 CapsuleCollider:
@@ -8203,7 +8201,7 @@ GameObject:
   - component: {fileID: 544164941}
   - component: {fileID: 544164940}
   - component: {fileID: 544164942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8398,7 +8396,7 @@ GameObject:
   - component: {fileID: 558179926}
   - component: {fileID: 558179925}
   - component: {fileID: 558179927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Badge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8598,7 +8596,7 @@ GameObject:
   - component: {fileID: 577213438}
   - component: {fileID: 577213437}
   - component: {fileID: 577213439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Exhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9051,7 +9049,7 @@ GameObject:
   - component: {fileID: 602699962}
   - component: {fileID: 602699961}
   - component: {fileID: 602699963}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9887,7 +9885,7 @@ GameObject:
   - component: {fileID: 665939617}
   - component: {fileID: 665939616}
   - component: {fileID: 665939618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_SteeringWheel_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11778,7 +11776,7 @@ GameObject:
   - component: {fileID: 826809866}
   - component: {fileID: 826809865}
   - component: {fileID: 826809867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Trim_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12249,7 +12247,7 @@ GameObject:
   - component: {fileID: 861249850}
   - component: {fileID: 861249849}
   - component: {fileID: 861249851}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chevrolet_Logo_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12613,7 +12611,7 @@ GameObject:
   - component: {fileID: 875361995}
   - component: {fileID: 875361994}
   - component: {fileID: 875361996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_SteeringWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13704,7 +13702,7 @@ GameObject:
   - component: {fileID: 949815383}
   - component: {fileID: 949815382}
   - component: {fileID: 949815384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14959,7 +14957,7 @@ GameObject:
   - component: {fileID: 1051528556}
   - component: {fileID: 1051528555}
   - component: {fileID: 1051528557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15189,7 +15187,7 @@ GameObject:
   - component: {fileID: 1059291658}
   - component: {fileID: 1059291657}
   - component: {fileID: 1059291659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16633,7 +16631,7 @@ GameObject:
   - component: {fileID: 1172668015}
   - component: {fileID: 1172668014}
   - component: {fileID: 1172668016}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Sirens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17293,7 +17291,7 @@ GameObject:
   - component: {fileID: 1244605076}
   - component: {fileID: 1244605075}
   - component: {fileID: 1244605077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17489,7 +17487,7 @@ GameObject:
   - component: {fileID: 1249216388}
   - component: {fileID: 1249216387}
   - component: {fileID: 1249216389}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18426,7 +18424,7 @@ GameObject:
   - component: {fileID: 1305642566}
   - component: {fileID: 1305642565}
   - component: {fileID: 1305642567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chevrolet_Logo_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24304,7 +24302,7 @@ GameObject:
   - component: {fileID: 1715891548}
   - component: {fileID: 1715891547}
   - component: {fileID: 1715891549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Seats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24585,7 +24583,7 @@ GameObject:
   - component: {fileID: 1733860101}
   - component: {fileID: 1733860100}
   - component: {fileID: 1733860102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Trim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25534,7 +25532,7 @@ GameObject:
   - component: {fileID: 1797194293}
   - component: {fileID: 1797194292}
   - component: {fileID: 1797194294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26899,7 +26897,7 @@ GameObject:
   - component: {fileID: 1911395896}
   - component: {fileID: 1911395895}
   - component: {fileID: 1911395897}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_WindshieldWIpers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28391,7 +28389,7 @@ GameObject:
   - component: {fileID: 2006848759}
   - component: {fileID: 2006848758}
   - component: {fileID: 2006848760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Grill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29036,7 +29034,7 @@ GameObject:
   - component: {fileID: 2044083632}
   - component: {fileID: 2044083631}
   - component: {fileID: 2044083633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31351,9 +31349,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149505669983}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13806134, y: 0.6934978, z: 0.69349766, w: -0.1380614}
-  m_LocalPosition: {x: 143.31355, y: 9.165284, z: 412.41443}
-  m_LocalScale: {x: 7054.0347, y: 7054.036, z: 7054.039}
+  m_LocalRotation: {x: -0.61187327, y: -0.3544165, z: -0.35441646, w: 0.6118734}
+  m_LocalPosition: {x: 2.7400024, y: -0.11400026, z: -11.47}
+  m_LocalScale: {x: 100.000015, y: 100.00003, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7265341026582645877}
@@ -31379,7 +31377,7 @@ Transform:
   - {fileID: 8309556079182111931}
   - {fileID: 3503245810184723116}
   - {fileID: 4442616445399768426}
-  m_Father: {fileID: 322907805}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -60.162}
 --- !u!4 &543450653567562351
 Transform:
@@ -31407,7 +31405,7 @@ GameObject:
   - component: {fileID: 3665331878750740630}
   - component: {fileID: 1099151751933388553}
   - component: {fileID: 2383266516761497203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Sirens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31521,7 +31519,7 @@ GameObject:
   - component: {fileID: 2446887715004591446}
   - component: {fileID: 4036668557706396205}
   - component: {fileID: 8506768551931989460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Trim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31577,7 +31575,7 @@ GameObject:
   - component: {fileID: 3503245810184723116}
   - component: {fileID: 3782467366160487555}
   - component: {fileID: 7209410978708489826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chevrolet_Logo_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31788,7 +31786,7 @@ GameObject:
   - component: {fileID: 919132149505669984}
   - component: {fileID: 919132149505669985}
   - component: {fileID: 919132149505669986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chevrolet_Caprice_Tiedtke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33145,7 +33143,7 @@ GameObject:
   - component: {fileID: 2975431608366492218}
   - component: {fileID: 5275071485363532266}
   - component: {fileID: 7680162341456393998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Exhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33195,7 +33193,7 @@ GameObject:
   - component: {fileID: 2902373111971852970}
   - component: {fileID: 8905363650511286007}
   - component: {fileID: 600889630621791832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34174,7 +34172,7 @@ GameObject:
   - component: {fileID: 8355973071563384460}
   - component: {fileID: 4441928404597755121}
   - component: {fileID: 4252422248253920293}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34410,7 +34408,7 @@ GameObject:
   - component: {fileID: 8507186932063662242}
   - component: {fileID: 2318778686987189328}
   - component: {fileID: 4424740248531158533}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_SteeringWheel_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34763,7 +34761,7 @@ GameObject:
   - component: {fileID: 6136954360253823174}
   - component: {fileID: 4881747099462641508}
   - component: {fileID: 5739380520364933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34891,7 +34889,7 @@ GameObject:
   - component: {fileID: 6165547939821143095}
   - component: {fileID: 858517335907949855}
   - component: {fileID: 4053374552547682833}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Seats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35005,7 +35003,7 @@ GameObject:
   - component: {fileID: 347962065880222111}
   - component: {fileID: 2025062941095141721}
   - component: {fileID: 2121600904451627562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Badge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35023,7 +35021,7 @@ GameObject:
   - component: {fileID: 4247910869843967498}
   - component: {fileID: 6306965234013338009}
   - component: {fileID: 1621864290514436047}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35390,7 +35388,7 @@ GameObject:
   - component: {fileID: 4150232797082272055}
   - component: {fileID: 7475108761511157635}
   - component: {fileID: 4342357630545948136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35553,7 +35551,7 @@ GameObject:
   - component: {fileID: 9053051587804229433}
   - component: {fileID: 6570095343297600199}
   - component: {fileID: 6700461327507035805}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36062,7 +36060,7 @@ GameObject:
   - component: {fileID: 5050242916680550290}
   - component: {fileID: 8716359647079879081}
   - component: {fileID: 1489930914960087736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Trim_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36312,7 +36310,7 @@ GameObject:
   - component: {fileID: 7309811431296143897}
   - component: {fileID: 5067671331609664133}
   - component: {fileID: 1144379453050535234}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Grill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36515,7 +36513,7 @@ GameObject:
   - component: {fileID: 4442616445399768426}
   - component: {fileID: 8920667062272932650}
   - component: {fileID: 8786789867684536761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chevrolet_Logo_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37123,7 +37121,7 @@ Animator:
   m_GameObject: {fileID: 919132148278130227}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 84d4877379c6c204db54eb6660e6e557, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe2c6b33685348447bc6a8391f7efb9d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -37171,17 +37169,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 5866666020639340276}
   target: {fileID: 543450651865462790}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
+  fsmController: {fileID: 1892342118}
   walkPoint: {x: 0, y: 0, z: 0}
   pointRange: 3
   cooldown: 0
-  sightDistance: 0
-  attackDistance: 0
+  baseSpeed: 3.5
+  sightDistance: 10
+  attackDistance: 2
   playerInSight: 0
   playerInAttack: 0
 --- !u!4 &5901452233460951685
@@ -37613,7 +37610,7 @@ GameObject:
   - component: {fileID: 6213218273596347500}
   - component: {fileID: 1190932437203716453}
   - component: {fileID: 2668547407826537910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_SteeringWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38152,7 +38149,7 @@ GameObject:
   - component: {fileID: 8309556079182111931}
   - component: {fileID: 902622974777514203}
   - component: {fileID: 3360321640495498155}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_WindshieldWIpers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38278,7 +38275,7 @@ GameObject:
   - component: {fileID: 2232698616350569832}
   - component: {fileID: 8695172455192440131}
   - component: {fileID: 6567129181638291707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38552,7 +38549,7 @@ GameObject:
   - component: {fileID: 8077387175078310498}
   - component: {fileID: 6152015865727919604}
   - component: {fileID: 2800024174850928433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Wheel_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39689,7 +39686,7 @@ GameObject:
   - component: {fileID: 7265341026582645877}
   - component: {fileID: 6338380671921396924}
   - component: {fileID: 1030999792720715560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39919,7 +39916,7 @@ GameObject:
   - component: {fileID: 1586815746976187597}
   - component: {fileID: 6136369623074410807}
   - component: {fileID: 1241041355631598272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40046,7 +40043,7 @@ GameObject:
   - component: {fileID: 3879683402456095173}
   - component: {fileID: 6578571147945059777}
   - component: {fileID: 5413581818018914262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Caprice_Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40330,7 +40327,9 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 330585546}
   - {fileID: 1054315442}
-  - {fileID: 322907805}
+  - {fileID: 543450653223903717}
+  - {fileID: 444262708}
   - {fileID: 2099200886}
   - {fileID: 543450651865462790}
   - {fileID: 1066335184}
+  - {fileID: 322907805}

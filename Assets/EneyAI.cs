@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using FSM.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -8,10 +9,10 @@ using Random = UnityEngine.Random;
 public class EneyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
-    
     public Transform target;
-
-    public LayerMask whatIsGround, whatIsPlayer;
+    public LayerMask whatIsPlayer;
+    public FsmController fsmController;
+    private Animator animator;
     
     public Vector3 walkPoint;
     private bool pointSet ;
@@ -19,6 +20,7 @@ public class EneyAI : MonoBehaviour
     
     public float cooldown;
     private bool attacked;
+    public float baseSpeed = 3.5f;
     
     public float sightDistance, attackDistance;
     public bool playerInSight, playerInAttack;
@@ -27,6 +29,8 @@ public class EneyAI : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        fsmController = GetComponent<FsmController>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -34,20 +38,10 @@ public class EneyAI : MonoBehaviour
         playerInSight = Physics.CheckSphere(transform.position, sightDistance, whatIsPlayer);
         playerInAttack = Physics.CheckSphere(transform.position, attackDistance, whatIsPlayer);
 
-        if (!playerInSight && !playerInAttack)
-        {
-            Patrolling();
-        }
-
-        if (playerInSight && !playerInAttack)
-        {
-            Chase();
-        }
-
-        if (playerInAttack)
-        {
-            Attack();
-        }
+        if (!playerInSight && !playerInAttack) Patrolling();
+        if (playerInSight && !playerInAttack) Chase();
+        if (playerInAttack) Attack();
+        if (fsmController.Ulting) RunAway();
     }
 
     private void Patrolling()
@@ -61,6 +55,8 @@ public class EneyAI : MonoBehaviour
         if (pointSet)
         {
             agent.SetDestination(walkPoint);
+            agent.speed = baseSpeed;
+            animator.SetTrigger("Walking");
             Debug.Log("point");
         }
         
@@ -74,6 +70,8 @@ public class EneyAI : MonoBehaviour
     private void Chase()
     {
         agent.SetDestination(target.position);
+        agent.speed += 2;
+        animator.SetTrigger("Running");
     }
 
     private void Attack()
@@ -89,6 +87,11 @@ public class EneyAI : MonoBehaviour
             attacked = true;
             Invoke(nameof(resetAttack), cooldown);
         }
+    }
+
+    private void RunAway()
+    {
+        animator.SetTrigger("RunAway");
     }
 
     private void resetAttack()
