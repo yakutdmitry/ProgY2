@@ -20,7 +20,7 @@ public class EneyAI : MonoBehaviour
     
     public float cooldown;
     private bool attacked;
-    public float baseSpeed = 3.5f;
+    public float baseSpeed;
     
     public float sightDistance, attackDistance;
     public bool playerInSight, playerInAttack;

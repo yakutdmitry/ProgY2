@@ -9,8 +9,8 @@ namespace FSM.Scripts
         private Fsm _fsm;
         private float _walkSpeed;
         private float _runSpeed;
-        public int AttackDuration = 3;
-        [SerializeField] private float visionDuration = 4.5f;
+        public int AttackDuration;
+        [SerializeField] private float visionDuration;
         public bool Ulting;
         
         public AudioSource _soudns;

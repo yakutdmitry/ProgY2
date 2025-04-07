@@ -5,7 +5,7 @@ public class LiftingObjects : MonoBehaviour
 {
     public float forceMultiplier; 
     public float liftDuration; 
-    private float timer = 0f; 
+    private float timer; 
 
     private Rigidbody rb;
     private bool isLifting = false; 

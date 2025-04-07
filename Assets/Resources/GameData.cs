@@ -25,7 +25,7 @@ public class GameData : ScriptableObject
         public float enemySightDistance;
         public float enemyAttackDistance;
 
-        [Header("Lifting Objects")]
+        [Header("Environment")]
         public int objectsLifted;
         public float forceMultiplier;
         public float liftDuration;

@@ -1,22 +1,20 @@
 using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class shooting : MonoBehaviour
 {
     public GameObject projectile;
     private float _projectileSpeed;
-    public GameData _gameData;
-    private string filePath;
-    
+    public GameData gameData;
     
     private void Start()
     {
-        filePath = Path.Combine(Application.persistentDataPath, "Data.json");
         
-        DataManager.loadData(_gameData, "Data.json");
+        DataManager.loadData(gameData, "Data.json");
         
-        _projectileSpeed = _gameData.projectileSpeed;
+        _projectileSpeed = gameData.projectileSpeed;
     }
 
     private void Update()
@@ -31,8 +29,8 @@ public class shooting : MonoBehaviour
     private void Shoot()
     {
         
-        _gameData.projectilesFired++;
-        DataManager.saveData(_gameData, "Data.json");
+        gameData.projectilesFired++;
+        DataManager.saveData(gameData, "Data.json");
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
