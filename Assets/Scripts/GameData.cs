@@ -4,10 +4,12 @@ public class GameData : ScriptableObject
 {
         public float walkSpeed;
         public float runSpeed;
-
+        public float projectileSpeed;        
+        
+        public int projectilesFired;
         public int ultCounter;
         public int enemiesKilled;
         
-        public float projectileSpeed;
-        public float projectilesFird;
+
+        
 }

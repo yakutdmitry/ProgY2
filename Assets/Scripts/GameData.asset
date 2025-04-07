@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550852fb2c7ca344da7af3dda897e41a, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  walkSpeed: 0
-  runSpeed: 0
-  visionDuration: 0
+  walkSpeed: 10
+  runSpeed: 25
+  projectileSpeed: 10
+  projectilesFired: 11
+  ultCounter: 23
+  enemiesKilled: 4

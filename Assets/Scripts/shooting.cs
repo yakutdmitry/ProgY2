@@ -6,29 +6,17 @@ public class shooting : MonoBehaviour
 {
     public GameObject projectile;
     private float _projectileSpeed;
-    public GameData gameData;
-    private string _filePath;
-
-    private void loadData()
-    {
-        if (File.Exists(filePath))
-        {
-            string josn = File.ReadAllText(gameData);
-            JsonUtility.FromJsonOverwrite(josn, gameData);
-        }
-        else
-        {
-            Debug.Log("File not found");
-        }
-    }
+    public GameData _gameData;
+    private string filePath;
+    
     
     private void Start()
     {
-        _filePath = Path.Combine(Application.persistentDataPath, "Data.json");
+        filePath = Path.Combine(Application.persistentDataPath, "Data.json");
         
-        loadData();
+        DataManager.loadData(_gameData, "Data.json");
         
-        _projectileSpeed = gameData.projectileSpeed;
+        _projectileSpeed = _gameData.projectileSpeed;
     }
 
     private void Update()
@@ -42,8 +30,9 @@ public class shooting : MonoBehaviour
 
     private void Shoot()
     {
-        gameData.projectileSpeed++;
-        saveData();
+        
+        _gameData.projectilesFired++;
+        DataManager.saveData(_gameData, "Data.json");
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
@@ -58,12 +47,5 @@ public class shooting : MonoBehaviour
                 rb.linearVelocity = direction * _projectileSpeed;
             }
         }
-    }
-
-    private void saveData()
-    {
-        string json = JsonUtility.ToJson(gameData);
-        File.WriteAllText(_filePath, json);
-        Debug.Log(_filePath);
     }
 }

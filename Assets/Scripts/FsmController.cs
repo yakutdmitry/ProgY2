@@ -20,24 +20,26 @@ namespace FSM.Scripts
         public GameData _gameData;
         private string _filePath;
 
-        private void LoadData()
-        {
-            if (File.Exists(_filePath))
-            {
-                string json = File.ReadAllText(_filePath);
-                JsonUtility.FromJsonOverwrite(json, _gameData);
-            }
-            else
-            {
-                Debug.Log("No file found");
-            }
-        }
+        
+        
+        // private void LoadData()
+        // {
+        //     if (File.Exists(_filePath))
+        //     {
+        //         string json = File.ReadAllText(_filePath); 
+        //         JsonUtility.FromJsonOverwrite(json, _gameData);
+        //     }
+        //     else
+        //     {
+        //         Debug.Log("No file found");
+        //     }
+        // }
         
         private void Start()
         {
             _filePath = Path.Combine(Application.persistentDataPath, "Data.json");
             
-            LoadData();
+            DataManager.loadData(_gameData, "Data.json");   
             
             _walkSpeed = _gameData.walkSpeed;
             _runSpeed = _gameData.runSpeed;
@@ -64,7 +66,7 @@ namespace FSM.Scripts
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 _gameData.ultCounter++;
-                SaveData();
+                DataManager.saveData(_gameData, "Data.json");  
                 _fsm.SetState<FsmStateVision>();
             }
             
@@ -78,26 +80,26 @@ namespace FSM.Scripts
                 Debug.Log("ENEMY DETECTED");
                 Destroy(other.gameObject);
                 _gameData.enemiesKilled++; 
-                SaveData();
+                DataManager.saveData(_gameData, "Data.json");
             }
         }
 
-        private void SaveData()
-        {
-            string json = JsonUtility.ToJson(_gameData);
-            File.WriteAllText(_filePath, json);
-            Debug.Log(_filePath);
-            
-        }
+        // private void SaveData()
+        // {
+        //     string json = JsonUtility.ToJson(_gameData);
+        //     File.WriteAllText(_filePath, json);
+        //     Debug.Log(_filePath);
+        //     
+        // }
 
         private void OnApplicationQuit()
         {
-            SaveData();
+            DataManager.saveData(_gameData, "Data.json");
         }
 
         private void OnApplicationPause(bool pauseStatus)
         {
-            SaveData();
+            DataManager.saveData(_gameData, "Data.json");
         }
     }
 }

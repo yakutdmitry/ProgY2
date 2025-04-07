@@ -132,13 +132,5 @@ public class EneyAI : MonoBehaviour
         
         pointSet = true;
         
-        // if (Physics.Raycast(walkPoint, -transform.up, whatIsGround))
-        // {
-        //     pointSet = true;
-        // }
-        // else
-        // {
-        //     Debug.logger.Log("Raycast Problem");
-        // }
     }
 }
