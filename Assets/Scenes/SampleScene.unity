@@ -44626,7 +44626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 5844860450190842872, guid: 635e80ff6996dea4fa3eae597033bd96, type: 3}
-  _gameData: {fileID: 11400000, guid: 9836635a7e0f79848be58713d20202de, type: 2}
+  gameData: {fileID: 0}
 --- !u!95 &5866666020639340275
 Animator:
   serializedVersion: 7

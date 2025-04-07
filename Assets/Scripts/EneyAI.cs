@@ -148,6 +148,14 @@ public class EneyAI : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player" && fsmController.Ulting)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnApplicationPause(bool pauseStatus)
     {
         DataManager.saveData(_gameData, "Data.json");

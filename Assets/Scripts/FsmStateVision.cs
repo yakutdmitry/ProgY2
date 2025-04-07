@@ -22,7 +22,7 @@ namespace FSM.Scripts
             foreach (var renderer in TargetGroup.GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 renderer.material.EnableKeyword("_EMISSION");
-                Debug.Log("ENABLED");
+
             }
             RenderSettings.fog = true;
             

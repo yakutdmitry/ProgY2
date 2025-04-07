@@ -11,7 +11,6 @@ namespace FSM.Scripts
         public override void Enter()
         {
             _fsmController = GameObject.FindGameObjectWithTag("Player").GetComponent<FsmController>();
-            Debug.Log("Test State ENTER, Controller found");
             _fsmController._animator.Play("Ulting");
             _fsmController.Ulting = true;
         }
@@ -28,7 +27,6 @@ namespace FSM.Scripts
 
         public override void Exit()
         {
-            Debug.Log("Test State EXIT");
         }
         
     }
