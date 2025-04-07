@@ -25,11 +25,20 @@ public class EneyAI : MonoBehaviour
     public float sightDistance, attackDistance;
     public bool playerInSight, playerInAttack;
 
+    public GameData _gameData;
+    
     private void Awake()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        
+        DataManager.loadData(_gameData, "Data.json");
+        pointRange = _gameData.enemyPointRange;
+        cooldown = _gameData.enemyCooldown;
+        baseSpeed = _gameData.enemyBaseSpeed;
+        sightDistance= _gameData.enemySightDistance;
+        attackDistance = _gameData.enemyAttackDistance;
     }
 
     private void Update()
@@ -81,6 +90,8 @@ public class EneyAI : MonoBehaviour
             agent.speed = baseSpeed;
             // animator.SetTrigger("Walking");
             Debug.Log("point");
+            
+
         }
         
         Vector3 distToWalkPoint = transform.position - walkPoint;
@@ -99,6 +110,7 @@ public class EneyAI : MonoBehaviour
 
     private void Attack()
     {
+        
         agent.SetDestination(transform.position);
         
         transform.LookAt(target);
@@ -120,6 +132,7 @@ public class EneyAI : MonoBehaviour
 
     private void resetAttack()
     {
+        _gameData.attacksPerformed++;
         attacked = false;
     }
 
@@ -131,6 +144,17 @@ public class EneyAI : MonoBehaviour
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
         
         pointSet = true;
+        _gameData.pointsSet++;
         
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        DataManager.saveData(_gameData, "Data.json");
+    }
+
+    private void OnApplicationQuit()
+    {
+        DataManager.saveData(_gameData, "Data.json");
     }
 }

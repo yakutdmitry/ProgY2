@@ -19,34 +19,25 @@ namespace FSM.Scripts
         
         public GameData _gameData;
         private string _filePath;
-
-        
-        
-        // private void LoadData()
-        // {
-        //     if (File.Exists(_filePath))
-        //     {
-        //         string json = File.ReadAllText(_filePath); 
-        //         JsonUtility.FromJsonOverwrite(json, _gameData);
-        //     }
-        //     else
-        //     {
-        //         Debug.Log("No file found");
-        //     }
-        // }
+        private Vector3 _startPosition;
         
         private void Start()
         {
+            
             _filePath = Path.Combine(Application.persistentDataPath, "Data.json");
             
             DataManager.loadData(_gameData, "Data.json");   
             
+            transform.position = _gameData.playerPosition;
             _walkSpeed = _gameData.walkSpeed;
             _runSpeed = _gameData.runSpeed;
             
             _fsm = new Fsm();
             _animator = GetComponent<Animator>();
             _soudns = GetComponent<AudioSource>();
+            
+            
+            
             _fsm.AddState(new FsmStateIdle(_fsm));
             _fsm.AddState(new FsmStateWalk(_fsm, transform, _walkSpeed));
             _fsm.AddState(new FsmStateRun(_fsm, transform, _runSpeed));
@@ -54,11 +45,16 @@ namespace FSM.Scripts
             _fsm.AddState(new FsmStateVision(_fsm, Targets, visionDuration));
             
             _fsm.SetState<FsmStateIdle>();
+            
+            
         }
 
         private void Update()
         {
             _fsm.Update();
+            
+            _startPosition = transform.position;
+            _gameData.playerPosition = _startPosition;
             // Debug.Log(anim);
 
             if (Input.GetKeyDown(KeyCode.T)){_fsm.SetState<FsmStateTest>();}
