@@ -61,7 +61,7 @@ namespace FSM.Scripts
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                _gameData.ultCounter++;
+                _gameData.ultimatesPerformed++;
                 DataManager.saveData(_gameData, "Data.json");  
                 _fsm.SetState<FsmStateVision>();
             }

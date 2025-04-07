@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 [CreateAssetMenu(fileName = "GameData", menuName = "ScriptableObjects/GameData")]
 public class GameData : ScriptableObject
 {
@@ -13,7 +15,7 @@ public class GameData : ScriptableObject
         public int projectilesFired;
         public int attacksPerformed;
         public int pointsSet;
-        public int ultCounter;
+        public int ultimatesPerformed;
         public int enemiesKilled;
 
         [Header("Enemies")] 
@@ -22,6 +24,11 @@ public class GameData : ScriptableObject
         public float enemyBaseSpeed;
         public float enemySightDistance;
         public float enemyAttackDistance;
+
+        [Header("Lifting Objects")]
+        public int objectsLifted;
+        public float forceMultiplier;
+        public float liftDuration;
         
 
 

@@ -3,16 +3,24 @@ using UnityEngine;
 
 public class LiftingObjects : MonoBehaviour
 {
-    public float forceMultiplier = 10f; 
-    public float liftDuration = 10f; 
+    public float forceMultiplier; 
+    public float liftDuration; 
     private float timer = 0f; 
 
     private Rigidbody rb;
     private bool isLifting = false; 
+    public GameData gameData;
 
     void Start()
     {
+        gameData = Resources.Load<GameData>("GameData");
+        DataManager.loadData(gameData, "Data.json");
+        
         rb = GetComponent<Rigidbody>();
+        
+        forceMultiplier = gameData.forceMultiplier;
+        liftDuration = gameData.liftDuration;
+        
     }
 
     void Update()
@@ -38,8 +46,18 @@ public class LiftingObjects : MonoBehaviour
             if (timer >= liftDuration)
             {
                 isLifting = false;
+                gameData.objectsLifted++;
             }
         }
-        
+    }
+
+    private void OnApplicationQuit()
+    {
+        DataManager.saveData(gameData, "Data.json");
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        DataManager.saveData(gameData, "Data.json");
     }
 }
