@@ -26,7 +26,6 @@ namespace FSM.Scripts
             }
             RenderSettings.fog = true;
             
-            
             // _meshRenderer = TargetGroup.GetComponentInChildren<SkinnedMeshRenderer>();
             Debug.Log("Entered FsmStateVision");
             // _meshRenderer.material.EnableKeyword("_EMISSION");

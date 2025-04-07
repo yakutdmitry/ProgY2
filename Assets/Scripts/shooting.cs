@@ -1,13 +1,39 @@
 using System;
+using System.IO;
 using UnityEngine;
 
 public class shooting : MonoBehaviour
 {
     public GameObject projectile;
-    [SerializeField] private float _projectileSpeed;
+    private float _projectileSpeed;
+    public GameData gameData;
+    private string _filePath;
+
+    private void loadData()
+    {
+        if (File.Exists(filePath))
+        {
+            string josn = File.ReadAllText(gameData);
+            JsonUtility.FromJsonOverwrite(josn, gameData);
+        }
+        else
+        {
+            Debug.Log("File not found");
+        }
+    }
+    
+    private void Start()
+    {
+        _filePath = Path.Combine(Application.persistentDataPath, "Data.json");
+        
+        loadData();
+        
+        _projectileSpeed = gameData.projectileSpeed;
+    }
 
     private void Update()
     {
+        
         if (Input.GetMouseButtonDown(0)) // ЛКМ
         {
             Shoot();
@@ -16,6 +42,9 @@ public class shooting : MonoBehaviour
 
     private void Shoot()
     {
+        gameData.projectileSpeed++;
+        saveData();
+        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
@@ -29,5 +58,12 @@ public class shooting : MonoBehaviour
                 rb.linearVelocity = direction * _projectileSpeed;
             }
         }
+    }
+
+    private void saveData()
+    {
+        string json = JsonUtility.ToJson(gameData);
+        File.WriteAllText(_filePath, json);
+        Debug.Log(_filePath);
     }
 }

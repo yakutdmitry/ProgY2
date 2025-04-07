@@ -44698,7 +44698,7 @@ MonoBehaviour:
     m_Bits: 64
   fsmController: {fileID: 1892342118}
   walkPoint: {x: 0, y: 0, z: 0}
-  pointRange: 3
+  pointRange: 5
   cooldown: 0
   baseSpeed: 3.5
   sightDistance: 10
