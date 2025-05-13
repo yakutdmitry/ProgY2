@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550852fb2c7ca344da7af3dda897e41a, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  playerPosition: {x: -1.9600692, y: 0.027246902, z: -26.905188}
+  playerPosition: {x: -0.96812326, y: 0.0062968344, z: -32.443596}
   walkSpeed: 10
   runSpeed: 25
   projectileSpeed: 10
-  projectilesFired: 51
-  attacksPerformed: 228
-  pointsSet: 29
-  ultimatesPerformed: 0
-  enemiesKilled: 4
+  projectilesFired: 95
+  attacksPerformed: 605
+  pointsSet: 32
+  ultimatesPerformed: 11
+  enemiesKilled: 6
   enemyPointRange: 5
   enemyCooldown: 1
   enemyBaseSpeed: 3.5
   enemySightDistance: 10
   enemyAttackDistance: 2
-  objectsLifted: 17
+  objectsLifted: 476
   forceMultiplier: 2
-  lifDuration: 2
+  liftDuration: 2

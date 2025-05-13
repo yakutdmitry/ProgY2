@@ -88,7 +88,7 @@ public class EneyAI : MonoBehaviour
         {
             agent.SetDestination(walkPoint);
             agent.speed = baseSpeed;
-            // animator.SetTrigger("Walking");
+            
             Debug.Log("point");
             
 
@@ -105,7 +105,7 @@ public class EneyAI : MonoBehaviour
     {
         agent.SetDestination(target.position);
         agent.speed += 2;
-        // animator.SetTrigger("Running");
+        
     }
 
     private void Attack()
@@ -117,7 +117,6 @@ public class EneyAI : MonoBehaviour
 
         if (!attacked)
         {
-            ///put animation here 
             
             attacked = true;
             Invoke(nameof(resetAttack), cooldown);
@@ -126,7 +125,6 @@ public class EneyAI : MonoBehaviour
 
     private void RunAway()
     {
-        // animator.SetTrigger("RunAway");
         agent.speed = 0;
     }
 
@@ -152,7 +150,10 @@ public class EneyAI : MonoBehaviour
     {
         if (other.tag == "Player" && fsmController.Ulting)
         {
+            Debug.Log("COLLISION WIH PLAYER");
+            _gameData.enemiesKilled++;
             Destroy(gameObject);
+            
         }
     }
 
